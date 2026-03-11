@@ -40,4 +40,5 @@ jobs:
           EOF
 
       - name: dbt build
+        working-directory: dbt        
         run: dbt build
