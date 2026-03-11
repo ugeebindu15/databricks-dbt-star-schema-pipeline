@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: golds
+    database: workspace
+    schema: golds
+    tables:
+      - name: fact_bookings
+      - name: dim_airports
+      - name: dim_flights
+      - name: dim_passengers
+

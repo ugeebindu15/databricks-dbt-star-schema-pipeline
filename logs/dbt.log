@@ -1,0 +1,367 @@
+[0m12:15:50.277294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f1b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f51950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f52050>]}
+
+
+============================== 12:15:50.285801 | 1cca24ec-c2cb-4b01-ba57-e4ba1a5a9614 ==============================
+[0m12:15:50.285801 [info ] [MainThread]: Running with dbt=1.10.0
+[0m12:15:50.286779 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/ugeebindu/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:15:50.326198 [info ] [MainThread]: dbt version: 1.10.0
+[0m12:15:50.327386 [info ] [MainThread]: python version: 3.11.4
+[0m12:15:50.328046 [info ] [MainThread]: python path: /usr/local/bin/python3
+[0m12:15:50.328739 [info ] [MainThread]: os info: macOS-15.3.1-x86_64-i386-64bit
+[0m12:15:52.392010 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:15:52.392886 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:15:52.393869 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:15:54.312240 [info ] [MainThread]: Using profiles dir at /Users/ugeebindu/.dbt
+[0m12:15:54.312960 [info ] [MainThread]: Using profiles.yml file at /Users/ugeebindu/.dbt/profiles.yml
+[0m12:15:54.313509 [info ] [MainThread]: Using dbt_project.yml file at /Users/ugeebindu/dbt_databricks_proj/databricks-dbt-star-schema-pipeline/dbt_project.yml
+[0m12:15:54.314025 [info ] [MainThread]: adapter type: databricks
+[0m12:15:54.314528 [info ] [MainThread]: adapter version: 1.10.3
+[0m12:15:54.315044 [info ] [MainThread]: Configuration:
+[0m12:15:54.315533 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:15:54.316021 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:15:54.316507 [info ] [MainThread]: Required dependencies:
+[0m12:15:54.317091 [debug] [MainThread]: Executing "git --help"
+[0m12:15:54.342686 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:15:54.344469 [debug] [MainThread]: STDERR: "b''"
+[0m12:15:54.345158 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:15:54.345948 [info ] [MainThread]: Connection:
+[0m12:15:54.346650 [info ] [MainThread]:   host: dbc-4224c409-19e9.cloud.databricks.com
+[0m12:15:54.347177 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/a70f8c0c4ba1b2c9
+[0m12:15:54.347671 [info ] [MainThread]:   catalog: workspace
+[0m12:15:54.348151 [info ] [MainThread]:   schema: golds
+[0m12:15:54.349089 [info ] [MainThread]: Registered adapter: databricks=1.10.3
+[0m12:15:54.618374 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug, idle-time=0s, language=None, compute-name=) - Creating connection
+[0m12:15:54.619328 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m12:15:54.620047 [debug] [MainThread]: Using databricks connection "debug"
+[0m12:15:54.620820 [debug] [MainThread]: On debug: select 1 as id
+[0m12:15:54.621513 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:16:16.011115 [error] [MainThread]: Encountered an error:
+
+[0m12:16:16.039016 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1075, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1002)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1002)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/impl.py", line 317, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt_common/record.py", line 507, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 438, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 337, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 310, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 471, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 450, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/__init__.py", line 93, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/client.py", line 307, in __init__
+    self.session.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/session.py", line 135, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 599, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 512, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 418, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries.sleep()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 379, in sleep
+    self._sleep_backoff()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 363, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m12:16:16.048941 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 25.903248, "process_in_blocks": "0", "process_kernel_time": 1.17598, "process_mem_max_rss": "207806464", "process_out_blocks": "0", "process_user_time": 4.919627}
+[0m12:16:16.050864 [debug] [MainThread]: Command `dbt debug` failed at 12:16:16.050638 after 25.91 seconds
+[0m12:16:16.051546 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:16:16.052387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f51bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1148b3c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f51e10>]}
+[0m12:16:16.053536 [debug] [MainThread]: Flushing usage events
+[0m12:16:16.263241 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:17:33.643784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11203b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112056010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112056710>]}
+
+
+============================== 12:17:33.653528 | 4dd06969-8882-4289-b3c8-bfc0fa5096b5 ==============================
+[0m12:17:33.653528 [info ] [MainThread]: Running with dbt=1.10.0
+[0m12:17:33.654643 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ugeebindu/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:17:33.694084 [info ] [MainThread]: dbt version: 1.10.0
+[0m12:17:33.695200 [info ] [MainThread]: python version: 3.11.4
+[0m12:17:33.695837 [info ] [MainThread]: python path: /usr/local/bin/python3
+[0m12:17:33.696559 [info ] [MainThread]: os info: macOS-15.3.1-x86_64-i386-64bit
+[0m12:17:36.402369 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:17:36.403536 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:17:36.404277 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:17:38.855004 [info ] [MainThread]: Using profiles dir at /Users/ugeebindu/.dbt
+[0m12:17:38.856055 [info ] [MainThread]: Using profiles.yml file at /Users/ugeebindu/.dbt/profiles.yml
+[0m12:17:38.857003 [info ] [MainThread]: Using dbt_project.yml file at /Users/ugeebindu/dbt_databricks_proj/databricks-dbt-star-schema-pipeline/dbt_project.yml
+[0m12:17:38.857959 [info ] [MainThread]: adapter type: databricks
+[0m12:17:38.858882 [info ] [MainThread]: adapter version: 1.10.3
+[0m12:17:38.863087 [info ] [MainThread]: Configuration:
+[0m12:17:38.863714 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:17:38.864296 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:17:38.864919 [info ] [MainThread]: Required dependencies:
+[0m12:17:38.865577 [debug] [MainThread]: Executing "git --help"
+[0m12:17:38.903399 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:17:38.905117 [debug] [MainThread]: STDERR: "b''"
+[0m12:17:38.906062 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:17:38.909387 [info ] [MainThread]: Connection:
+[0m12:17:38.910874 [info ] [MainThread]:   host: dbc-4224c409-19e9.cloud.databricks.com
+[0m12:17:38.912050 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/a70f8c0c4ba1b2c9
+[0m12:17:38.913568 [info ] [MainThread]:   catalog: workspace
+[0m12:17:38.914470 [info ] [MainThread]:   schema: golds
+[0m12:17:38.916709 [info ] [MainThread]: Registered adapter: databricks=1.10.3
+[0m12:17:39.323476 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug, idle-time=0s, language=None, compute-name=) - Creating connection
+[0m12:17:39.325208 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m12:17:39.325891 [debug] [MainThread]: Using databricks connection "debug"
+[0m12:17:39.326565 [debug] [MainThread]: On debug: select 1 as id
+[0m12:17:39.327228 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:18:12.382426 [error] [MainThread]: Encountered an error:
+
+[0m12:18:12.414949 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1075, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1002)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1002)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/cli/main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/impl.py", line 317, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt_common/record.py", line 507, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 438, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 337, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 310, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 471, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/connections.py", line 450, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/__init__.py", line 93, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/client.py", line 307, in __init__
+    self.session.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/session.py", line 135, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 599, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 512, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/backend/thrift_backend.py", line 418, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 1 more time]
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries.sleep()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 379, in sleep
+    self._sleep_backoff()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 363, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m12:18:12.433840 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 38.928288, "process_in_blocks": "0", "process_kernel_time": 1.295237, "process_mem_max_rss": "206311424", "process_out_blocks": "0", "process_user_time": 5.196804}
+[0m12:18:12.436211 [debug] [MainThread]: Command `dbt debug` failed at 12:18:12.435677 after 38.93 seconds
+[0m12:18:12.437103 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:18:12.437788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112055c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11eaa3c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120568d0>]}
+[0m12:18:12.438649 [debug] [MainThread]: Flushing usage events
+[0m12:18:12.659118 [debug] [MainThread]: An error was encountered while trying to flush usage events

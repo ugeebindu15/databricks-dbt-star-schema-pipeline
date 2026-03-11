@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: business_view
+    description: "Revenue by country"
+    columns:
+      - name: country
+        tests:
+          - not_null
+          - unique
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: passenger_revenue
+    description: "Bookings and spend per passenger"
+    columns:
+      - name: total_bookings
+        tests:
+          - not_null
+      - name: total_spent
+        tests:
+          - not_null
+
+  - name: flight_revenue
+    description: "Revenue by airline route"
+    columns:
+      - name: airline
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: airport_revenue
+    description: "Revenue by airport and country"
+    columns:
+      - name: country
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
